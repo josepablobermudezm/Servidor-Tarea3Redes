@@ -4,9 +4,9 @@ class transporte:
     def __init__(self, nombre):
         self.nombre = nombre
 
-    def metodo(self):
-        """Imprime un saludo en pantalla."""
-        print(f"¡Hola, {self.nombre}!")
-    def enviarMensaje(self,c, mensaje):
-        print("Mensaje Enviado: "+ mensaje)
-        c.send(mensaje.encode('utf8', errors='replace'))
+    def recibirMensaje(self,c):
+        
+        mensaje = c.recv(1024)
+        print("Mensaje Recibido: "+ mensaje.decode('utf8'))
+
+        return mensaje.decode('utf8')

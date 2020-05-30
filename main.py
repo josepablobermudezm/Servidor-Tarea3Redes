@@ -1,5 +1,4 @@
-from Clases import aplicacion
+from Clases import sesion
 
 if __name__ == '__main__':
-    #llama a la capa de aplicacion
-    aplicacion.teclapresionada(None)
+    sesion.iniciarServidor(None, "", 44440)#llamamos a la capa de sesión para comenzar el servidor y establer la conexión
