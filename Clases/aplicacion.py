@@ -1,6 +1,5 @@
 import msvcrt
 import os
-from .presentacion import presentacion
 
 class aplicacion:
 
