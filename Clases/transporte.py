@@ -8,9 +8,14 @@ class transporte:
 
     def recibirMensaje(self,c):
         mensaje = c.recv(1024)
-        print("Mensaje Recibido: "+ mensaje.decode('utf8') +" en la capa de Transporte")
-
-        mensajeConvertidoAString = enlaceDatos.Convertir_A_String(None,mensaje.decode('utf8'))
-        #llama a la capa de Enlace de Datos que convierte el mensaje de bits a String
-        print("Mensaje convertido de bits a String en capa de Enlace de Datos " + mensajeConvertidoAString )
-        return mensajeConvertidoAString
+        cantTramas = int(mensaje)
+        cont=0
+        bits=""
+        while cont<cantTramas:
+            mensaje = c.recv(1024)
+            print("Trama Recibida: "+ mensaje.decode('utf8') +" en la capa de Transporte")
+            trama = enlaceDatos.Convertir_A_String(None,mensaje.decode('utf8')) 
+            print("Trama codificada: "+trama)
+            bits+=trama
+            #llama a la capa de Enlace de Datos que convierte el mensaje de bits a String
+        return bits

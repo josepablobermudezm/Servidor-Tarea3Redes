@@ -55,6 +55,4 @@ class presentacion:
                 if indice+1 == len(palabra):
                     l += palabra[indice]
                     palabraAux += switcher.get(l, "???")
-
-        
         aplicacion.mostrarMensaje(None,palabraAux)#llamamos a la capa de aplicación para mostrar el mensaje
