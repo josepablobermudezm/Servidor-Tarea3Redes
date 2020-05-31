@@ -14,7 +14,7 @@ class sesion:
         while True:
             # establecer conexión
             (c, addr) = s.accept()
-            print("----------------------------------------------------------------------")
+            print("---------------------------------------------------------------------------")
             print("Se estableció conexión con : %s " % str(addr) + " en la capa de Sesión")
             msg = transporte.recibirMensaje(None, c)#llama a la capa de transporte y retorna el mensaje después de recibir el mensaje
             presentacion.desencriptar(None,msg)#desencriptamos el mensaje

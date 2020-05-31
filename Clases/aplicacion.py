@@ -9,4 +9,4 @@ class aplicacion:
 
     def mostrarMensaje(self, Mensaje):
         print("El mensaje es: " + Mensaje + " mostrado en la capa de Aplicacion")
-        print("---------------------------------------------------------------------")
+        print("--------------------------------------------------------------------------")
