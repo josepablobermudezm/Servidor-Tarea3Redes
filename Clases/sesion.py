@@ -1,6 +1,7 @@
 import socket, os
-from .transporte import transporte
 from .presentacion import presentacion
+from .transporte import transporte
+
 class sesion:
 
     def __init__(self, nombre):
@@ -13,7 +14,8 @@ class sesion:
         while True:
             # establecer conexión
             (c, addr) = s.accept()
-            print("Se estableció conexión con: %s " % str(addr))
+            print("----------------------------------------------------------------------")
+            print("Se estableció conexión con : %s " % str(addr) + " en la capa de Sesión")
             msg = transporte.recibirMensaje(None, c)#llama a la capa de transporte y retorna el mensaje después de recibir el mensaje
             presentacion.desencriptar(None,msg)#desencriptamos el mensaje
             c.close()

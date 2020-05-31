@@ -8,5 +8,5 @@ class aplicacion:
         self.c = c
 
     def mostrarMensaje(self, Mensaje):
-        
-        print("El mensaje decodificado es:" + Mensaje)
+        print("El mensaje es: " + Mensaje + " mostrado en la capa de Aplicacion")
+        print("---------------------------------------------------------------------")

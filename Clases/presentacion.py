@@ -1,4 +1,3 @@
-from .sesion import sesion
 from .aplicacion import aplicacion
 class presentacion:
 
@@ -7,7 +6,8 @@ class presentacion:
 
 
     def desencriptar(self,palabra):
-        palabraAux = palabra
+        print("Desencriptando mensaje en la capa de Presentación")
+        palabraAux = ""
 
         switcher = {
             "!_#": 'A',

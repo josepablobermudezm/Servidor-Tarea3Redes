@@ -6,5 +6,5 @@ class transporte:
 
     def recibirMensaje(self,c):
         mensaje = c.recv(1024)
-        print("Mensaje Recibido: "+ mensaje.decode('utf8'))
+        print("Mensaje Recibido: "+ mensaje.decode('utf8') +" en la capa de Transporte")
         return mensaje.decode('utf8')
