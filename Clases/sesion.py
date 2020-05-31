@@ -10,7 +10,7 @@ class sesion:
     def iniciarServidor(self,host, puerto):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.bind((host,puerto))
-        s.listen(5) #hasta 5 repeticiones
+        s.listen(10) #hasta 10 repeticiones
         while True:
             print("Esperando conexion...")
             # establecer conexión
