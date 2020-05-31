@@ -12,6 +12,7 @@ class sesion:
         s.bind((host,puerto))
         s.listen(5) #hasta 5 repeticiones
         while True:
+            print("Esperando conexion...")
             # establecer conexión
             (c, addr) = s.accept()
             print("---------------------------------------------------------------------------")
